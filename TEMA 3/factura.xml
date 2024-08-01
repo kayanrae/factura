@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FACTURA>
+   <TITLE>Firma de proba</TITLE>
+   <BODY>
+      <B1>
+         <SERIE>FCT. nr.0023</SERIE>
+         <date type="date">2008-03-27</date>
+      </B1>
+      <B2>
+         <FIRMA>
+            <TITLE>Firma Test</TITLE>
+            <CIF>RO123456678</CIF>
+            <ADRESS>Str.Bucuresti,nr.22,Craiova,Jud.Dolj</ADRESS>
+            <IBANNR>RO1234567890111213141516</IBANNR>
+            <NAME_BANCA>BCR.Craiova</NAME_BANCA>
+         </FIRMA>
+         <CLIENT>
+            <NAME>Dynamic Soft Service</NAME>
+            <CIF>RO5566778889</CIF>
+            <ADRESS>str.Client,nr.5,Brasov, jud. Brasov</ADRESS>
+            <IBANNR>RO01BTRL6567858XXXXXXXXX</IBANNR>
+            <NAME_BANCA>BT.Brasov</NAME_BANCA>
+         </CLIENT>
+      </B2>
+      <PRODUSE_COMANDATE>
+         <PRODUS id="1">
+            <NAME>Prestari servicii contact nr.21/14.01.2008</NAME>
+            <MASURA>Bucata</MASURA>
+            <CANTITATE>1 Bucata</CANTITATE>
+            <PRET_FARA_TVA>1000</PRET_FARA_TVA>
+            <VAL_TVA>190</VAL_TVA>
+            <PRET_TOTAL>1190</PRET_TOTAL>
+         </PRODUS>
+         <PRODUS id="2">
+            <NAME>Hosting server</NAME>
+            <MASURA>saptamani</MASURA>
+            <CANTITATE>50</CANTITATE>
+            <PRET_FARA_TVA>5000</PRET_FARA_TVA>
+            <VAL_TVA>950</VAL_TVA>
+            <PRET_TOTAL>5950</PRET_TOTAL>
+         </PRODUS>
+         <PRODUS id="3">
+            <NAME>Dezvoltare aplicatie mobila</NAME>
+            <MASURA>Bucata</MASURA>
+            <CANTITATE>1 Bucata</CANTITATE>
+            <PRET_FARA_TVA>3000</PRET_FARA_TVA>
+            <VAL_TVA>570</VAL_TVA>
+            <PRET_TOTAL>3570</PRET_TOTAL>
+         </PRODUS>
+         <TOTAL_FACTURA>
+            <TOTAL_FARA_TVA>9000</TOTAL_FARA_TVA>
+            <TOTAL_VAL_TVA>1710</TOTAL_VAL_TVA>
+            <TOTAL>10710</TOTAL>
+         </TOTAL_FACTURA>
+      </PRODUSE_COMANDATE>
+      <B3>
+         <NAME_REDACTOR_FACTURA>Vlaicu Pop</NAME_REDACTOR_FACTURA>
+         <CNP>18212201904565</CNP>
+         <NAME_DELEGAT>Maria Voda</NAME_DELEGAT>
+         <MIJLOC_TRANSPORT>B43833</MIJLOC_TRANSPORT>
+      </B3>
+   </BODY>
+</FACTURA>

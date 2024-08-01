@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="FACTURA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TITLE" type="xs:string" />
+        <xs:element name="BODY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="B1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SERIE" type="xs:string" />
+                    <xs:element name="date">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:date">
+                            <xs:attribute name="type" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="B2">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="FIRMA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TITLE" type="xs:string" />
+                          <xs:element name="CIF" type="xs:string" />
+                          <xs:element name="ADRESS" type="xs:string" />
+                          <xs:element name="IBANNR" type="xs:string" />
+                          <xs:element name="NAME_BANCA" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CLIENT">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="NAME" type="xs:string" />
+                          <xs:element name="CIF" type="xs:string" />
+                          <xs:element name="ADRESS" type="xs:string" />
+                          <xs:element name="IBANNR" type="xs:string" />
+                          <xs:element name="NAME_BANCA" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PRODUSE_COMANDATE">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="PRODUS">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="NAME" type="xs:string" />
+                          <xs:element name="MASURA" type="xs:string" />
+                          <xs:element name="CANTITATE" type="xs:string" />
+                          <xs:element name="PRET_FARA_TVA" type="xs:unsignedShort" />
+                          <xs:element name="VAL_TVA" type="xs:unsignedShort" />
+                          <xs:element name="PRET_TOTAL" type="xs:unsignedShort" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="TOTAL_FACTURA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TOTAL_FARA_TVA" type="xs:unsignedShort" />
+                          <xs:element name="TOTAL_VAL_TVA" type="xs:unsignedShort" />
+                          <xs:element name="TOTAL" type="xs:unsignedShort" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="B3">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="NAME_REDACTOR_FACTURA" type="xs:string" />
+                    <xs:element name="CNP" type="xs:unsignedLong" />
+                    <xs:element name="NAME_DELEGAT" type="xs:string" />
+                    <xs:element name="MIJLOC_TRANSPORT" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
